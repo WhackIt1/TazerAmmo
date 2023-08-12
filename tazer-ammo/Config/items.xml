@@ -36,8 +36,8 @@
 			<property name="UnlockedBy" value="perkShotgunMessiahBreachingSlugs"/> <!-- BOOK_PERK -->
 			
 			<effect_group name="ammoShotgunShellTazer" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="102" tags="perkBoomstick"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="80" tags="perkBoomstick"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkBoomstick"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="40" tags="perkBoomstick"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="1" tags="perkBoomstick"/>
 				<passive_effect name="MaxRange" operation="base_set" value="18" tags="perkBoomstick"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="9" tags="perkBoomstick"/>
