@@ -1,0 +1,10 @@
+<khaine>
+	<!-- Adding Tazer Ammo to ui_display so stats display -->
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="ammoBulletTazer" display_group="groupAmmo">
+			<display_entry name="EntityDamage" title_key="statEntityDamageRanged"/>
+			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
+	</append>
+</khaine>

@@ -1,0 +1,81 @@
+<configs>
+	<append xpath="/items">
+
+		<item name="resourceStunBattery">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mdirt"/>
+			<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+			<property name="EconomicValue" value="20"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		
+		<item name="resourceStunBatteryBundle">
+			<property name="Extends" value="resourceRockSmallBundle"/>
+			<property name="CustomIcon" value="resourceStunBattery"/>
+			<property name="UnlockedBy" value="craftingExplosives"/><!-- perkDemolitionsExpert -->
+			<property class="Action0">
+				<property name="Create_item" value="resourceStunBattery"/>
+				<property name="Create_item_count" value="1000"/>
+			</property>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+
+		<item name="ammoShotgunShellTazer">
+			<property name="Extends" value="ammoShotgunShell"/>
+			<property name="Tags" value="ammo,shotgun,ammoShells"/>
+			<property name="CustomIcon" value="ammoShotgunShell"/>
+			<property name="CustomIconTint" value="FF9999"/>
+			<property name="DisplayType" value="ammoBulletTazer"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="TraderStageTemplate" value="ammoTier3"/>
+			<property name="Damage_type" value="Heat"/>
+			<property name="DescriptionKey" value="ammoTazerGroupDesc"/>
+			<property name="UnlockedBy" value="perkShotgunMessiahBreachingSlugs"/> <!-- BOOK_PERK -->
+			
+			<effect_group name="ammoShotgunShellTazer" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="102" tags="perkBoomstick"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="80" tags="perkBoomstick"/>
+				<passive_effect name="RoundRayCount" operation="base_set" value="1" tags="perkBoomstick"/>
+				<passive_effect name="MaxRange" operation="base_set" value="18" tags="perkBoomstick"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="9" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.4" tags="perkBoomstick"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.4" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.35" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkBoomstick"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				
+				<passive_effect name="stunBatonDuration" operation="base_set" value="4"/>
+				<passive_effect name="stunBatonDuration" operation="perc_add" value=".8" tags="perkElectrocutioner"/>
+				
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked" duration="@stunBatonDuration">
+					<requirement name="CompareItemMetaFloat" operation="Equals" value="5" key="charge"/></triggered_effect>
+
+				<display_value name="dDuration" value="@stunBatonDuration"/>
+			</effect_group>
+		</item>
+		
+		<item name="ammoBundleShotgunShellTazer">
+			<property name="Extends" value="ammoBundleMaster"/>
+			<property name="CustomIcon" value="ammoShotgunShell"/>
+			<property name="CustomIconTint" value="FF9999"/>
+			<property name="EconomicValue" value="1100"/>
+			<property name="UnlockedBy" value="perkShotgunMessiahComplete"/> <!-- BOOK_PERK -->
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			
+			<property class="Action0">
+				<property name="Create_item" value="ammoShotgunShellTazer"/>
+			</property>
+		</item>
+
+	</append>
+	<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellTazer</append>
+	<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellTazer</append>
+	<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellTazer</append>
+	<append xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellTazer</append>
+
+</configs>

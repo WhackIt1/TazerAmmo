@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <Name value="Tazer_Ammunition" />
+  <DisplayName value="Tazer Ammunition" />
+  <Description value="Add Tazer ammunition to the game, allowing the player to shock zombies." />
+  <Author value="Whackit1" />
+  <Version value="21.0.0" compat="A21" />
+  <Website value="https://github.com/WhackIt1/TazerAmmo" />
+</xml>

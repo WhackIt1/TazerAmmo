@@ -1,0 +1,7 @@
+Key,english
+ammoShotgunShellTazer,"Shotgun Shell, Tazer (Ammo)"
+ammoBundleShotgunShellTazer,"Box of Tazer Shotgun Shells (100)"
+ammoTazerGroupDesc,Tazer ammunition electrifies and stuns enemies
+resourceStunBattery,"Stun Battery"
+resourceStunBatteryBundle,"Bundle of Stun Batteries (1000)"
+resourceStunBatteryDesc,Stun batteries used in the manufacturing of Tazer rounds.

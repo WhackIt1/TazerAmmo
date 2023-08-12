@@ -1,0 +1,8 @@
+<configs>
+	<!-- Adding Tazer ammo to HP/Breaching Slug book perk so it can be unlocked -->
+	<append xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']/effect_group/passive_effect[@level='1']/@tags">,ammoShotgunShellTazer</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@icon='ammoRocketFrag']/unlock_entry/@item">,resourceStunBatteryBundle</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags="resourceStunBatteryBundle"/>	
+	</append>
+</configs>
