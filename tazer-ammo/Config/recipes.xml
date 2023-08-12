@@ -1,25 +1,27 @@
 <config>
 	<append xpath="/recipes">
 	
-		<recipe name="resourceStunBattery" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
-			<ingredient name="resourceCrushedSand" count="6"/>
-			<ingredient name="resourceRockSmall" count="3"/>
+		<recipe name="resourceStunBattery" count="10" craft_time="90" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
-		<recipe name="resourceStunBatteryBundle" count="1" craft_time="2700" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
-			<ingredient name="resourceRockSmall" count="4800"/>
-			<ingredient name="resourceCrushedSand" count="2400"/>
+		<recipe name="resourceStunBatteryBundle" count="1" craft_time="600" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceScrapPolymers" count="80"/>
+			<ingredient name="carBattery" count="8"/>
+			<ingredient name="resourceElectricParts" count="16"/>
 		</recipe>
 		
-		<recipe name="ammoShotgunShellTazer" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
-			<ingredient name="resourceBuckshot" count="1"/>
+		<recipe name="ammoShotgunShellTazer" count="1" craft_time="9" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
 			<ingredient name="resourceGunPowder" count="4"/>
 			<ingredient name="resourceStunBattery" count="1"/>
 			<ingredient name="resourceScrapPolymers" count="1"/>
 		</recipe>
 		
-		<recipe name="ammoBundleShotgunShellTazer" count="1" craft_time="540" craft_area="workbench" tags="learnable,workbenchCrafting">
-			<ingredient name="resourceBuckshot" count="80"/>
+		<recipe name="ammoBundleShotgunShellTazer" count="1" craft_time="480" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="80"/>
 			<ingredient name="resourceGunPowder" count="400"/>
 			<ingredient name="resourceStunBattery" count="80"/>
 			<ingredient name="resourceScrapPolymers" count="80"/>

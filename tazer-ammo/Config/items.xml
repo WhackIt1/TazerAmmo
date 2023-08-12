@@ -15,10 +15,10 @@
 		<item name="resourceStunBatteryBundle">
 			<property name="Extends" value="resourceRockSmallBundle"/>
 			<property name="CustomIcon" value="resourceStunBattery"/>
-			<property name="UnlockedBy" value="craftingExplosives"/><!-- perkDemolitionsExpert -->
+			<property name="UnlockedBy" value="craftingRobotics"/>
 			<property class="Action0">
 				<property name="Create_item" value="resourceStunBattery"/>
-				<property name="Create_item_count" value="1000"/>
+				<property name="Create_item_count" value="100"/>
 			</property>
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 		</item>
@@ -33,7 +33,7 @@
 			<property name="TraderStageTemplate" value="ammoTier3"/>
 			<property name="Damage_type" value="Heat"/>
 			<property name="DescriptionKey" value="ammoTazerGroupDesc"/>
-			<property name="UnlockedBy" value="perkShotgunMessiahBreachingSlugs"/> <!-- BOOK_PERK -->
+			<property name="UnlockedBy" value="perkTechJunkie4Shells"/>
 			
 			<effect_group name="ammoShotgunShellTazer" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkBoomstick"/>
@@ -76,7 +76,7 @@
 			<property name="CustomIcon" value="ammoShotgunShell"/>
 			<property name="CustomIconTint" value="FF9999"/>
 			<property name="EconomicValue" value="1100"/>
-			<property name="UnlockedBy" value="perkShotgunMessiahComplete"/> <!-- BOOK_PERK -->
+			<property name="UnlockedBy" value="perkTechJunkie8Complete"/> <!-- BOOK_PERK -->
 			<property name="TraderStageTemplate" value="ammoTier1"/>
 			
 			<property class="Action0">
