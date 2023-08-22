@@ -1,5 +1,5 @@
 <configs>
-	<!-- Adding Tazer ammo to HP/Breaching Slug book perk so it can be unlocked -->
+	<!-- Adding Tazer ammo to Tech Junkie book perk so it can be unlocked -->
 	<append xpath="/progression/perks/book[@name='perkTechJunkie4Shells']/effect_group/passive_effect[@level='1']/@tags">,ammoShotgunShellTazer</append>
 	<append xpath="/progression/perks/book[@name='perkTechJunkie8Complete']/effect_group/passive_effect[@level='1']/@tags">,ammoBundleShotgunShellTazer</append>
 	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']">
